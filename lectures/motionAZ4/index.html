@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <!-- Canonical link to help search engines -->
+  <link rel="canonical" href="/ed/lectures/motionAZ4/"/>
+
+  <!-- Basic meta elements -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+
+  <!--   Dublin Core metadata for Zotero -->  
+  <meta name="DC.title" content="Just Motion" />
+  <meta name="DC.creator" content="Chip Brock" />
+  <meta name="DC.contributor" content="" />
+  <meta name="DC.date" content="" />
+  <meta name="DC.rights" content="" />
+  <meta name="DC.source" content="“QS&BB”" />
+  
+    <!-- Open Graph metadata -->
+
+    
+    <meta property="og:title" content="Just Motion"/>
+    <meta property="og:description" content="An Ed edition">
+    <meta property="fb:admins" content="elotroalex"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://qstbb.pa.msu.edu//ed/lectures/motionAZ4/"/>
+    <meta property="fb:app_id" content="589495744558280"/>
+    <meta property="og:image" content="http://qstbb.pa.msu.edu//ed/public/open-graph-logo.png"/>
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    
+   
+<!--   <title>
+    
+      Many Body Wavefunctions
+    
+  </title>-->
+  
+  <title>
+    
+      Just Motion
+    
+  </title>
+
+  <!-- CSS links -->
+<!--   <link rel="stylesheet" href="/docs/public/css/syntax.css"/>
+  <link rel="stylesheet" href="/docs/public/css/tqm.css"/>>-->
+  
+  <link rel="stylesheet" href="/ed/public/css/syntax.css"/>
+  <link rel="stylesheet" href="/ed/public/css/ed.css"/>
+ 
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/ed/public/apple-touch-icon-precomposed.png"/>
+  <link rel="shortcut icon" href="/ed/public/favicon.ico"/>
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/ed/atom.xml"/>
+  
+  <!-- MathJax -->
+
+ <script type="text/javascript"
+   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+ </script>
+
+ <!---<script type="text/javascript"
+   src="/docs/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+ </script>--->
+
+ <script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+   TeX: { equationNumbers: { autoNumber: "all" },
+          Macros: {
+          cP: '\\mathcal{P}',
+          cN: '\\mathcal{N}',
+          cE: '\\mathcal{E}',
+          cO: '\\mathcal{O}',
+          cH: '\\mathcal{H}',
+          cC: '\\mathcal{C}',
+          br: '\\mathbf{r}',
+          bx: '\\mathbf{x}',
+          bp: '\\mathbf{p}',
+          bq: '\\mathbf{q}',
+          bk: '\\mathbf{k}',
+          bv: '\\mathbf{v}',
+          bA: '\\mathbf{A}',
+          brN: '\\br_1, \\ldots, \\br_N',
+          bxN: 'x_1, \\ldots, x_N',
+          pop: '\\psi^{\\vphantom{\\dagger}}',
+          pdop: '\\psi^\\dagger',
+          Phop: '\\Phi^{\\vphantom{\\dagger}}',
+          Phdop: '\\Phi^\\dagger',
+          phop: '\\phi^{\\vphantom{\\dagger}}',
+          phdop: '\\phi^\\dagger',
+          aop: 'a^{\\vphantom{\\dagger}}',
+          adop: 'a^\\dagger',
+          alop: '\\alpha^{\\vphantom{\\dagger}}',
+          aldop: '\\alpha^\\dagger',
+          bop: 'b^{\\vphantom{\\dagger}}',
+          bdop: 'b^\\dagger',
+          cop: 'c^{\\vphantom{\\dagger}}',
+          cdop: 'c^\\dagger',
+          Nop:  '\\mathsf{N}^{\\vphantom{\\dagger}}',
+          tr: '\\operatorname{tr}\\nolimits',
+          det: '\\operatorname{det}\\nolimits',
+          perm: '\\operatorname{perm}\\nolimits',
+          sgn: '\\operatorname{sgn}',
+          E: '\\operatorname{\\mathbb{E}}',
+          Var: '\\operatorname{\\mathbb{Var}}',
+          Cov: '\\operatorname{\\mathbb{Cov}}',
+          Re: '\\operatorname{Re}}',
+          ket: ['\\lvert{#1}\\rangle',1],
+          bra: ['\\langle{#1}\\rvert',1],
+          inner: ['\\langle{#1}\\rvert #2 \\rangle',2],
+          braket: ['\\langle{#1}\\rvert #2 \\lvert #3 \\rangle',3],
+          abs: ['\\lvert{#1}\\rvert',1]
+    }
+  },
+   extensions: ["tex2jax.js"],
+   jax: ["input/TeX","output/HTML-CSS"],
+   tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+ });
+ </script>
+
+$$
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\nonumber
+$$
+
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 50%;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #a7a7a7;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #dbdbdb;
+    color: black;
+}
+</style>
+  
+</head>
+
+  <body class="theme-base-0b">
+  
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- This if statement decides which sidebar to use -->
+    
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>An excursion into particle physics and cosmology for non-science students</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/ed/">Home</a>
+
+    
+
+    
+    
+      
+        
+          <a class="sidebar-nav-item active" href="/ed/lectures/motionAZ4/">Just Motion</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/ed/lectures/Galileo_bit/">A Little Bit of Galileo</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/ed/lectures/speed/">Speed</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/ed/lectures/SpecialRelativity1_1/">Relativity</a>
+        
+      
+    
+
+    <!-- The code below is used for manually entered links  -->
+
+    <a class="sidebar-nav-item" href="https://via.hypothes.is/http://qstbb.pa.msu.edu//ed/lectures/motionAZ4/">Annotate me</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>Distributed with an MIT license.</p>
+  </div>
+</div>
+
+    
+
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/ed/" title="Home">“QS&BB”</a>
+            <br><small>Quarks, Spacetime, and the Big Bang</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content" id="main">
+        <div class="page">
+  <h1 class="page-title">Just Motion</h1>
+  <p> </p>
+
+<blockquote class="chapter-goals"><span>
+<h3>Goals of this lesson:</h3>
+
+I'd like you to Understand:
+<ul>
+<li>How to calculate distance, time, and speed for uniform and constantly accelerated, linear motion</li>
+<li>That falling objects all have the same acceleration near the Earth.</li>
+<li>How to graph simple motion parameters</li>
+<li>How to read graphs of realistic motion parameters</li>
+</ul>
+I'd like you to Appreciate:
+<ul>
+<li>The algebraic narratives in the development of the formulas</li>
+<li>The shape of the trajectory of a projectile</li>
+<li>That a projectile’s motion is made of two components with different accelerations</li>
+</ul>
+I'd like you to become Familiar With:
+<ul>
+<li>Ideas of motion before Galileo</li>
+<li>Galileo’s life</li>
+<li>Galileo’s experiments with motion</li>
+</ul>
+</span></blockquote>
+
+<h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#a-greek-version-of-here-to-there" id="markdown-toc-a-greek-version-of-here-to-there">A Greek Version of Here to There</a></li>
+  <li><a href="#getting-from-here-to-there-at-constant-speed" id="markdown-toc-getting-from-here-to-there-at-constant-speed">Getting From Here to There: At Constant Speed</a></li>
+  <li><a href="#acceleration" id="markdown-toc-acceleration">Acceleration</a></li>
+  <li><a href="#galileo-and-free-fall" id="markdown-toc-galileo-and-free-fall">Galileo and Free Fall</a></li>
+  <li><a href="#projectiles-sec-projectiles" id="markdown-toc-projectiles-sec-projectiles">Projectiles {#sec: projectiles}</a></li>
+  <li><a href="#the-beginning-of-physics-sec-eginningphysics" id="markdown-toc-the-beginning-of-physics-sec-eginningphysics">The Beginning of Physics {#sec: eginningphysics}</a></li>
+</ul>
+
+<!--<span>Motion</span><span>Getting
+Around</span><span>Galileo\_sketch</span><span>Galileo Galilei,
+*circa*1624.</span><span>Galileo Galilei, 1564-1642</span><span>I do not
+feel obliged to believe that the same God who has endowed us with sense,
+reason, and intellect has intended us to forgo their
+use.</span><span>Letter to the Grand Duchess Christina</span><span> -->
+
+<p class="grayclass"><span class="grayhead">a little bit of Galileo</span><br /><br />Did you ever wonder why Galileo seems to have only one name? There’s a story about that.
+Every lesson will feaure a hero best associate with our topic. Some you will recognize and some you won’t!</p>
+
+<aside style="font-size:80%; font-family:sans-serif; color:grey;float:right;width:40%;padding-left:5px;">  <figure><img src="../../assets/motion/figs/Galileo_sketch.jpg" alt=" - " /><figcaption>Galileo Galilei    1564-1642</figcaption></figure> </aside>
+
+<p>One of his great-great-(great?) grandfathers was the original Florentine “Galileo” - a 15th century medical doctor and civil leader of the family Bonaiuti. So significant was Dr Galileo in Florence that the middle-class Bonaiuti family renamed itself “Galilei.” Our Galileo Galilei’s two identical names was a subtle parental reminder that he was expected to do great things. As a proud citizen of Florence.</p>
+
+<p>Except he wasn’t.  Galileo was born in Pisa within a year of the death of Michelangelo. He always considered himself a citizen of Florence, although he lived there only briefly in his early years. His father, Vincenzo, was a musician—early a wool merchant in his wife’s family business, and the family maintained its dignity, but their circumstances never lived up to their legendary ancestor.  Vincenzo eventually returned to Florence performing and composing  full time and established young Galileo’s primary education nearby. Vincenzo’s plan was that his son would be a doctor. No discussion. And off to the University of Padua he was sent.</p>
+
+<p>Galileo made a name for himself at the university—as shockingly disrespectful. Even at a young age, he was allergic to fools and he found the faculty overstocked in that category.<sup id="fnref:fools"><a href="#fn:fools" class="footnote">1</a></sup>  He was also impossibly resistant to the regimented intellectual system of all European universities: Aristotle. In every subject, philosophy, mathematics, law, logic, rhetoric, and astronomy: Aristotle. Particularly galling to Galileo was Aristotle’s physics and there he was in good company since Aristotle’s ideas about motion had not made sense to anyone for two centuries, but his authority was absolute. But Galileo—like his father—didn’t “do” authority.</p>
+
+<p>While a medical student, Galileo accidentally discovered an aptitude for mathematics that led him to an intense but clandestine math program with the Court Mathematician to the Grand Duke of Tuscany.
+After a tough discussion at home, he eventually abandoned medicine, leaving the university a year short of his degree. By this time he was doing original mathematical research (in geometry) and had caught the attention of scholars in Pisa and Rome.</p>
+
+<p>He lived at home for three years and gave private mathematics lessons in Florence and Sienna while he cultivated patrons for help in finding a university position.  After some rejections, he succeeded…back at the University of Pisa as a lecturer of mathematics. Where his welcome was underwhelming.</p>
+
+<p>His reputation as an original mathematician was growing when his father died and he inherited the responsibility of a significant dowry for one sister and responsibility to provide for the other’s. He spent the rest of his life in search of a higher salary and ways to augment his income, which as a lowly mathematician at Pisa was a quarter of that of a philosophy professor. He got his break when he was offered the position of Professor of Mathematics at the University of Padua, among the most prestigious universities in Europe and safely in the progressive Republic of Venice. It was at Padua where the Galileo magic happened.</p>
+
+<h1 id="a-greek-version-of-here-to-there">A Greek Version of Here to There</h1>
+
+<p>The correct understanding of everyday motion was long incoming. Classical works had been out of reach of Europe until Greek philosophy and science essentially fell into their laps in the form of hundreds of conflicting Arabic translations in the 1300s. Translation of Aristotle’s <em>Physics</em> from original Greek, to Arabic, and then to Latin did not make his ideas any less confused than they originally were.</p>
+
+<p>Aristotle—eventually revered as “The Philosopher”—had invented formal logic that taught people how to evaluate arguments. But while the Philosopher’s methods were refreshing, his ideas about motion were confused at best—but nonetheless became firmly stuck in the academic and Church communities where they were protected as <em>philosophy</em>, not as <em>science</em>.</p>
+
+<p>Not until the end of the 16th century did Galileo shed Aristotle and lay the groundwork for the first systematic understanding of what it means for something to move. It took three centuries! Let’s lay out the basics of The Philosopher’s mechanics so we’ll have something to shoot at.</p>
+
+<p>For Aristotle there were three kinds of motion: two “natural” and one “unnatural.” Natural motion near the Earth was in a <em>straight line</em>, either <em>down</em>  or <em>up</em> relative to the center of the Universe, which he located at the center of the Earth. The speed of downward motion depended on the amount of “earthy” composition of the object, and so its weight. If there was a lot of earthiness—think a rock—the object went down. If it had the property of “lightness” (a quality that’s foreign to us) it went up—think fire.</p>
+
+<p>Natural motion beyond the orbit of the Moon was to be <em>circular</em> with every extraterrestrial body attached to its own rotating crystalline sphere. These spheres were all nested with common centers and rotated around the Earth to account for the apparently circular orbits that we see from the Earth. They included all of the known planets, the Sun, and the Moon…and even the stars all together in the outermost shell. All three natural motions just happened…um, naturally.</p>
+
+<p>Unnatural motion was different. It required a pusher…an active force that was in physical contact with the object. Therein lay one of the most obvious flaws in his model.</p>
+
+<p class="waitclass"><span class="wait">Wait: </span>  Isn’t this exactly what happens in our lives? <br />
+<span class="wait">Glad you asked: </span> Yes, but it’s Galileo who taught us to think differently about what’s merely apparent, and what’s really important.</p>
+
+<p>It’s child’s play to make fun of these ideas. And I will. But  he was describing what he saw in his everyday life and trying to fit it together into his much bigger, intricately stitched-together philosophical structure. Pull at one piece of that system and the whole thing tumbles apart like a game of Jenga. So while his physics was bizarre and wrong, it stuck. It had to stick. But people knew for centuries that it had problems.<sup id="fnref:cause"><a href="#fn:cause" class="footnote">2</a></sup></p>
+
+<p class="grayclass"><span class="grayhead">projectiles, Aristotle’s way</span><br /><br /> Where Aristotle got himself into big trouble was with projectiles, like a thrown spear. His philosophical system came before explanation so he had to do an embarrassing dance to explain that when a rock was thrown the continuous “push” that he insisted was needed came from the displaced air rushing around behind the rock and pushing it forwards. Seriously. Everyone knew that this was nonsense. How can you throw a pointed spear sharp end first and the blunt end first? His authority was absolute, and organization of the first medieval universities with Philosophers and Theologians at the top guaranteed that natural science was taught by them.  Mathematicians and astronomers had supporting roles that were aimed at more mundane activities like casting horoscopes and designing military weaponry and fortifications.</p>
+
+<p>Galileo was the one person who changed the landscape and uncovered the modern notion of how things move, ridding the intellectual community of Aristotle’s baggage. He began his revolution while he was at Pisa where he wrote an unpublished manuscript, <em>de Motu</em> (“On Motion”). While he was unsatisfied, one of his conclusions was right on: all objects fall at the same rate, contrary to Aristotle’s insistence that heavier objects fell faster. His data? Not the Leaning Tower of Pisa. That’s a myth. He just looked around him. And saw things differently.</p>
+
+<h1 id="getting-from-here-to-there-at-constant-speed">Getting From Here to There: At Constant Speed</h1>
+
+<p>Motion is both easiest and the hardest concept in physics. You’ve been dropping things since you were a toddler and you learned the hard way that if you drop something from a high place it will more likely break than from a low height. You learned that the harder you throw a ball, the faster it will travel, the more damage it could do, and the farther it will go before landing (and that it always came down).</p>
+
+<p>Since you started driving, you began to develop an intuition for  magnitudes of speeds and you do speed arithmetic all the time: if you travel at 50 mph for 2 hours, you will have gone how far? 100 miles, right? In fact, you know a lot about speed and I wouldn’t shock you if I wrote a sentence-equation that defines it:</p>
+
+<script type="math/tex; mode=display">\text{speed} = \text{distance traveled divided the time that it took}</script>
+
+<p>That didn’t hurt, now did it. Simple! But.</p>
+
+<p>From our QS&amp;BB perspective, there’s a lot to unpack about this simple mathematical sentence and it will all matter as we move ahead. Just a taste:</p>
+
+<ol>
+  <li>If time doesn’t march on, we’ve not moved. But what is time? “The Big Business Man smiled. “‘I do know what time is,’ Tubby declared. He paused. ‘Time,’ he added slowly – ‘time is what keeps everything from happening at once…’ <sup id="fnref:time"><a href="#fn:time" class="footnote">3</a></sup> We’ll see time take on a new meaning.</li>
+  <li>The final frontier, Space, is either “just there” or it’s a relationship between two things. If all of the things in the universe disappeared, is there space left over? That’s an old, contentious issue and maybe was finally solved by Einstein.</li>
+  <li>What are the units? If the sign says “Speed Limit, 60,”” how fast is that? mph? meters/second? km per hour? furlongs per fortnight? It would be silly to just say “60” wouldn’t it. Wait. That’s exactly what our speed limit signs say. So you now even intuit speed units.</li>
+  <li>What’s the difference between space and time? In “speed” they are just two sides of the same coin, or two sides of the same ratio. But usually you think of them as different things. One’s not more important than the other is it? Eventually, we’ll let Einstein chime in here.</li>
+  <li>Particular speeds seem to be important. Mr Galileo taught us about one and James Clerk Maxwell and Albert Einstein taught us about another. (There he is again.)</li>
+</ol>
+
+<p>This is how we work now. We have learned to ask simple questions and discover that they sometimes lead to important and surprising answers. This was the skill that a handful of folks found out in the first three decades of the 20th century: simple = surprising! We’ll follow them as they do it.</p>
+
+<p class="dealclass"><span class="grayhead">motion: it’s everywhere</span><br /><br /> Almost everything in physics boils down to: motion. (Even boiling.)</p>
+
+<p>Whether it’s runners on a track, the cosmic rays piercing us all the time, orbiting planets, electrons in a wire, electromagnetic waves, quark wavefunctions inside of a proton, electrons and holes in a semiconductor, or the stretching of spacetime itself. Everything is about “motion.”</p>
+
+<p>These first lessons on the physics of my grandparents’ generation will establish the language and tools that we’ll need in order to pursue the more exotic forms of motion and we’ll become skilled at manipulating concepts (and their attendant symbols) like velocity, kinetic energy, mass, momentum, and force. Each of these terms has a 16th to 19th century origin, but each has managed to keep up with the times as layer
+upon layer of subtlety is discovered about each of them as we dig deeper and discover more.</p>
+
+<p>But at its most basic, our physics will be all about how to get from here to there and from then to now, and to be able to explain how that happened and predict what might come next.</p>
+
+<h2 id="speed-in-modern-terms">Speed in Modern Terms</h2>
+
+<p>To us, motion and its measure—speed—is a simple matter. Our cars and even devices on our wrists readily tell us how far we go, how long it takes us to get there, and the rate at which we do it. We can be penalized for traveling at rates that are…too enthusiastic. Speed, or its more sophisticated word-cousin, velocity, is so familiar to us that we hardly pay any attention to just how fundamental it is. Let’s start this very slowly (no pun intended) since some of our more sophisticated physics later will build on a strong underpinning of a few basic concepts. Speed is one such concept because it’s a blend of two even more fundamental concepts of space and time.</p>
+
+<p>Speed is a rate. For example, 60 mph describes the change in our spatial position and how long it took to make that change. Like all rates, it’s a ratio with respect to time and we’ve already agreed:</p>
+
+<p><script type="math/tex">\text{speed} =\cfrac{\text{change of distance in space}}{\text{change of time}}\tag{1}\label{speedwords}</script>
+Words are clumsy when we’re trying to be precise. Let’s make this more compact by inserting customary symbols to get rid of the English words. Here are the rules of the use of motion in QS&amp;BB:</p>
+
+<ul>
+  <li>
+    <p>We’ll limit ourselves almost exclusively to motion in one dimension
+   in space.</p>
+  </li>
+  <li>
+    <p>We’ll use the symbol $v$ for speed (because customarily, we’ll speak
+   of “velocity”…more about this below).</p>
+  </li>
+  <li>
+    <p>We’ll use the symbol $x$ for distance in one dimension, regardless
+   of which direction it points.</p>
+  </li>
+  <li>
+    <p>We’ll use the symbol $t$ for time and almost always presume that we
+   set our clocks so that the beginning time of any interval is
+$t_0=0$.</p>
+  </li>
+  <li>
+    <p>Oh, and we’ll use the subscript $_0$ to indicate the beginning of
+   some time interval “$t_0$” or location “$x_0$” in a sequence
+of events.</p>
+  </li>
+  <li>
+    <p>We’ll use the Greek symbol Delta, $\Delta$ to mean “change of”…this
+   will come up a lot.[^start]
+   [^start]:So if class starts at 10:20 AM and it lasts for 80 minutes, we’d say that $t_0=$10:20 and $t=$11:40 and that the class duration is $\Delta t=$ 80 minutes]</p>
+  </li>
+</ul>
+
+<p>So our formula for calculating speed changes from the English sentence
+in Eq. \eqref{speedwords} to a mathematical statement becomes:</p>
+
+<script type="math/tex; mode=display">v = \frac{\Delta x}{\Delta t}\tag{2}\label{motion2}</script>
+
+<p>We’re going to revisit this simple equation over and over again.</p>
+
+<p>Likewise, if I asked you how long it would take to travel north from Detroit 300 miles to the Mackinac Bridge at an average 50 mph, I’ll bet you could tell me. You have done this sort</p>
+
+<p class="grayclass"><span class="grayhead">rulers and clocks</span><br /><br /> It’s important to think about how we would measure any quantity. For speed, we’d need something that functions like a ruler in order to measure a distance in space and something that indicates time intervals—a clock. So if we’re on the interstate, we could imagine the mile-markers along a highway that tell us miles or better, small fractions of miles. We could arbitrarily designate a starting point as x=0 and then, after speeding up, travel—without acceleration—until some pre-determined time, say 2 hours, had elapsed. Of course we would measure time with a clock in the car that begins ticking when the car passes our starting point. Then after precisely two hours had elapsed the clock would cause a camera to take a picture of the mileage sign that was closest to being opposite the car. Let’s suppose that the sign read “100 miles.” Without putting pencil to paper (this time!) you could quickly calculate the average speed that the car traveled in that time as 50 miles per hour.</p>
+
+<h2 id="calculating-a-speed">Calculating a Speed</h2>
+
+<p>“Change” and “change-of” always means the difference between where you <em>are</em> as compared with where you <em>were</em>. Suppose I start out with $\$150$ and my wife gives me $\$50$. The change in my net worth is $\$50$, right? But we can represent this simple transaction as</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+\Delta(\text{my wealth}) &= \text{where I ended up} - \text{where I started} \\
+ &= \$150 - \$100=\$50.
+\end{align} %]]></script>
+
+<p>It’s “the end minus the beginning,” the final value of some quantity minus the initial value of that quantity.</p>
+
+<p>Remember that we’re using the standard notation in which the “initial state” of any quantity will be decorated with a little “0” subscript, like $x_0$ here. The “final state” will usually have no subscript and just be $x$. So $\Delta x = x-x_0$. Get it?</p>
+
+<p>✍</p>
+
+<p>So let’s use this notation now and be a little more specific. If we agree that the speed is:</p>
+
+<script type="math/tex; mode=display">\begin{equation} v = \frac{\Delta x}{\Delta t} \nonumber \end{equation}</script>
+
+<p>then the numerator and denominator -$\Delta$ notation really means:</p>
+
+<p><script type="math/tex">v = \frac{\Delta x}{\Delta t} = \frac{x - x_0}{t - t_0}.</script>
+✌</p>
+
+<p>Often, we’ll pretend that we can start our clock at the beginning of some event and so we can usually just let $t_0=0$ and then the symbol $t$ just stands for the time interval as well as the arbitrary ending time. You’ll see.</p>
+
+<p>When you go somewhere, or predict how long it will take to get from one place to another, you would instinctively use your average speed to calculate. You know how it goes. If the speed limit is 65 mph and you need to predict how long it will take you to go a long distance, you’d probably estimate that your average speed would be something like 50 mph, taking into account the slow trucks and rest stops.</p>
+
+<div class="graydeal">
+<h2>up north</h2>
+<h3>What's our average speed if we travel 300 miles in 6 hours?</h3>
+<p>Let's take a trip. Suppose we start driving from Detroit to above the Mackinaw Bridge.<br /><br />
+We'll start around Comerica Park and stay on I-75 as in the figure
+<figure><img src="../../assets/motion/figs/michiganABCD.png" alt=" - " width="70%" /><figcaption>Our trip to The Bridge (the letters will have a purpose below).</figcaption></figure>
+beginning at the nearest Comerica Park exit at the 50 mile marker then we’ll
+go all the way up, across the Mackinaw Bridge to Newberry, Michigan in
+the Northern Peninsula which we’ll say is marker 350. We’ll go fast.
+<br />
+The change in our displacement is<br />
+$$\Delta x = 350 - 50 = 300 \text{ miles}.$$<br />
+Now, we can write the real velocity relationship:<br />
+$$v = \frac{\Delta x}{\Delta t} = \frac{x - x_0}{t - t_0}.$$
+where I snuck in a “initial” decoration for the beginning time as well. If I
+start my clock ($t_0=0$) at mile 50 and stop it at mile 350, our average speed is:<br />
+$$v = \frac{\Delta x}{\Delta t} = \frac{x - x_0}{t - t_0} = \frac{350 - 50}{6 - 0} = \frac{300}{6} = 50 \text{ mph}.$$</p>
+</div>
+
+<p>We could plot this boring trip as a function of time or of distance. Look at the next three plots:</p>
+
+<figure><img src="../../assets/motion/figs/north12.png" alt=" - " width="100%" /><figcaption>Our speed graph.</figcaption></figure>
+
+<p>The left plot is just a picture of the story we told in the box. The right plot is the result of traveling at that impressively steady 50 mph for six straight hours. From our intuitive notion of a constant speed as well as a strict application of Eq. \eqref{motion2}. Let’s take it apart and rearrange some of the symbols and find a surprise.</p>
+
+<p>What if you stopped for lunch? That wouldn’t be reflected in this calculation since average really only depends on the endpoints in space and in time. If we’d driven for 5 hours and eaten for 1, the average would be precisely what we calculated above, If you made the endpoints closer together then the “structure” of your trip would become more apparent and an average would represent more and more finely grained information. In fact what your speedometer does is calculate averages, but based on such a small time interval that the driver can treat the reading as instantaneous. I’ll say a little more about what that means below.</p>
+
+<h2 id="diagramming-motion">Diagramming Motion</h2>
+
+<p>Graphical representation of motion is particularly instructive and…therapeutic.  We can absorb the graph of some function in one visual gulp. A perfect example of such a representation is when you draw a route on a map. The map has “space axes” of east-west ($x$) and north-south ($y$) and in order to describe your route to a friend you might point along the line, of course with time implied as progressing with your finger. So even though the line is a curve in just space, time is still there, but just hidden.</p>
+
+<p>So let’s straight out our map and label some points and make our trip a little more realistic. We’ll start at the ball park (point A), get up to 60 mph (at point B on the previous picture) and stay at that speed until we’re at about Wolverine, Michigan or approximately 45 miles from the north end of the bridge (point C), traffic will get heavy and we’ll slow to a stop just north of the bridge where we’ll admire the enormous mosquitos at point D.</p>
+
+<div class="graydeal">
+<h2>starting up, going, and arriving</h2>
+<h3>Plot the distance versus time for the trip between B and C on the map if we travel at a constant speed of 60 mph during that period. Assume that we reach that cruising speed after a half hour (speeding up between A and B) and start to slow down (traffic?) with 90 minutes to go.</h3>
+<p>Now the map has three points noted. A is where we start, between B and C we are able to maintain a steady 60 mph, and D is where we stop.<br /><br />
+We'll complete the trip in a bit, but let's work on that constant speed region.</p>
+<figure><img src="../../assets/motion/figs/michiganABCD.png" alt=" - " width="50%" /><figcaption>Our trip to Canada, more detail.</figcaption></figure>
+<div style="text-align:center">
+<video width="90%" controls="">
+  <source src="https://qstbb.pa.msu.edu/storage/QSBB_WebManuscript/Introduction/SolvingNewton1.m4v" type="video/mp4" />
+  <source src="mov_bbb.ogg" type="video/ogg" />
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<p>So our progress between B and C plotted against time --- we'd say, distance plotted as "a function of time"--- is this simple graph:
+    <figure><img src="../../assets/motion/figs/trip_xt.png" alt=" - " width="50%" /><figcaption>Distance versus time for the B-C segment of our trip.</figcaption></figure>
+
+</p>
+</div>
+
+<h2 id="space-space-graphs">Space Space Graphs</h2>
+
+<p>Let’s take a realistic trip. A regular map, like in Fig. [michigan],
+or the display on a GPS system, is a familiar way of looking at travel.
+Let’s make an approximation to that curvy map trip by straighteining out
+all of the road’s curves and bends so that it looks like the approximate
+straight line in Fig. [combined] a. Time is still implicit and the
+single coordinate is a space direction. Notice that I’ve labeled the
+axis along our straightened-out route the $x$ axis, increasing from
+Detroit ($x=0$, called A) to Newberry $x=300$ miles, called I).</p>
+
+<h2 id="spacetime-graphs">Spacetime Graphs</h2>
+
+<p>Now let’s represent the trip in a different way using axes that aren’t
+space “and space” but space and time. In this trip I drove and you fell
+asleep when we left Detroit and woke up five hours later when we
+arrived—you should go to bed earlier. You looked at your watch and saw
+that 5 hours had elapsed and looked at the odometer and saw that 300
+miles had been traversed and you calculated that your trip’s speed was
+$\frac{300}{5} = 60$ mph. You even drew the spacetime diagram for your
+idea of the trip in Fig. [combined] b. First, notice that your simple
+speed calculation corresponds to the finding the slope of this line.
+Also notice that you shifted the beginning point to define our distance
+origin, where $x=0$. In this case: which is a fine thing to have done.
+At any point during your nap, the slope of that space-time trajectory
+would the same as at any other point. So any region in which you
+calculate the speed by evaluating <script type="math/tex">v = \frac{\Delta x}{\Delta t}</script>
+over and over gives you the same value. Let’s rearrange things slightly
+and get a little equation…a predictive <em>model</em> of our motion: You give
+me a time, and using the model, I’ll tell you where you are. It’s a
+little physics machine.</p>
+
+<div class="graydeal">
+<h2></h2>
+<p>Remember the equation of a straight line with a slope of $m$ and which passes through the $y$ axis at $b$ (the “intercept”)? Sure you do. It’s $$x = mt + b.$$ Our spacetime trip plot fits this form with a zero intercept and a slope of $v$.</p>
+</div>
+
+<div class="graydeal">
+<h2></h2>
+<p>Gotta stop to eat once in a while.  <span>Racing to the bridge.</span>  Let’s suppose that we are able to get out of town early in the morning when the roads are empty. Not that I’d ever do this, but we’ll start our trip at a steady speed of 90 mph which we can keep up for 2 hours before traffic slows us down. Then we travel at a slower speed and find that we still arrive 5 hours after we began.  -   How far were we able to go before we had to slow down?  -   If the overall trip took 5 hours what was our average speed in the    second, 3 hour segment?  -   What was the overall average speed?  <span>The first segment, 90 mph for 2 hours, means that we went 180 miles before hitting the brakes. If we traveled for 5 hours in total, then the second segment took 3 hours and the distance left was $300-180 = 120$ miles. So the average speed in the second segment is $$v = \frac{120}{3} = 40 	    \text{ mph.}$$ Finally, the overall average speed is still the total distance divided by the time that it took. Still 60 mph. Figure [map3] shows the speed profile as the solid pair of curves. Notice that this is not the average of the averages. There is more distance covered by the fast trip segment than the slower trip segment. </span> <span>map3</span><span>map3</span></p>
+</div>
+
+<h1 id="acceleration">Acceleration</h1>
+
+<div class="graydeal">
+<h2></h2>
+<p>Figure [combined] b showed that in one interpretation of our trip we never deviated from 60 mph. Can you drive like that? I can’t and I didn’t! While you were asleep, I sped up, slowed down, and stopped for sushi. You calculated an *average* velocity for the whole trip, which doesn’t care what happened between the beginning and the end.  Let’s be a little more realistic and invent a trip profile shown in Fig. [map2]. . It’s like the previous version but in the open circles I’ve added where we actually are at each hour...if you’d been awake, you’d have realized that we went pretty fast between about hour 1 and hour 2. You were sound asleep when I stopped for that meal at the 4 hour mark. And so on—the constant-time interval hour marks are closely spaced (meaning little ground covered, and so slow) and spaced more apart (meaning lots of ground covered, and so a high speed).  Figure [trip\_vx\_xt] tells the whole story. With a little bit of artistic license, Fig. [trip\_vx\_xt] a shows the speed at each point along the road:  -   We started at A and accelerated to B, from 0 to 80 mph.  -   We drove at that speed from B to C for a while and then started to    reduce speed—must have seen a highway patrol car.  -   So from C to D we slowly reduced our speed for traffic to 50 mph and    held it steady until E when I got hungry.  -   So at E we started to slow for an exit and stopped for snack at    point F.  -   When we got back on the road I accelerated back to 80 mph, to H and    stayed at that speed until we got to our destination at I and you     woke up.  Figure [trip\_vx\_xt] b shows that same trip, but now plotting the space time representation. You can find each of the segments and compare them. From B to C, for example we’re traveling fast (the $x-t$ slope is steep) while from D to E, we’re traveling slower (the slope is less). From F to G, we didn’t change our position at all, but time elapsed while I enjoyed my raw fish.  Finally, for completion, Fig. [trip\_vt] shows how our speed changed as a function of time.  Any time a speed changes is an **acceleration**. And just as velocity is the rate at which distance changes, acceleration is the rate at which *velocity* changes. So it’s defined similarly:  $$a = \frac{\Delta v}{\Delta t.}$$[acceleration]  Let’s look at our trip before and after the sushi break and concentrate on how the velocity changes in time in Fig. [trip\_vx\_xt]. Putting the meaning of $\Delta$ back in explicitly, let’s look at G-H, when we’re refreshed from our sushi break: Where the speed was constant, like B to C, the slope of the $v-t$ graph is zero, so there’s no acceleration at all, or more correctly, $a=0$.  How about the interval C-D? First, notice from the graph that it’s going to have a negative slope, the opposite of the slope we just calculated. Explicitly, we can evaluate: What’s the significance of the negative sign? Well, for one thing whenever an acceleration is negative it means the object is slowing down. In vector-world, it means that the direction of the acceleration vector is the opposite from the direction of the motion.  The units of speed are easy to remember because we use them every day. They’re units of distance divided by units of time, or *per* unit time: miles per hour, feet per second, meters per second (the standard in physics), or kilometers per hour (if you drive in Canada).  But the units of acceleration, while simple to figure out, are a little unusual since we don’t use them in everyday life. From Equation [acceleration] they would of course be units of *speed* divided by units of time, but since the units of speed are distance per time, then the units of acceleration would be distance per time squared: "meters per second per second”[^1] is what we might say out loud, $\text{meters}/{\text{seconds}^2}$ or $\text{m}/{\text{s}^2}$ is what we’d write. That explains the units from our two intervals as mph per hour.</p>
+</div>
+
+<p>At any point along the distance-time plot we could determine the
+“instantaneous speed” by carefully drawing a line that’s tangent should
+the velocity change be varying (not a straight line). Your speedometer
+is not doing that but rather it’s measuring the average speed in time
+increments that are so small, that to you it looks like you’re receiving
+a report of your speed “right now,” but it’s not instantaneous in
+reality.</p>
+
+<p>Let’s take a bike ride.</p>
+
+<h3 id="graphical-kinematics">Graphical Kinematics</h3>
+
+<p>Let’s work out an extended example with realistic numbers. Follow along
+with me because if you become comfortable with this, what follows will
+be smooth sailing.</p>
+
+<p>Let’s think about a cyclist moving at a constant speed. These two
+pictures in Fig. [ConstantSpeed] describe all that you need to know
+about an object moving at a constant 4 meters per second (about 9 mph—a
+sprinter’s speed, or a relatively slow cyclist’s speed). Here we take
+the initial position to be zero (it could be our house). And, we take
+the initial time as zero (it could be when we leave). So, to find the
+distance traveled after 6 seconds by an object moving at that speed we
+would look at the graph at $t=6$ s and read about 24 meters. Or,
+equivalently, we could use the formula and calculate:[motion2]
+<script type="math/tex">% <![CDATA[
+\begin{aligned}
+ v &= \frac{x}{t} \\ \nonumber
+x &= vt  \\
+x &= (4 \mbox{m/s})(6\mbox{s}) = 24 \mbox{m.} \end{aligned} %]]></script></p>
+
+<p>Equation [speed] has that geometrical meaning we spoke of. Referring
+to Fig. [ConstantSpeed], in the first second, in the right plot I see
+that my speed is 4 m/s and that I traveled about 4 m (left plot). In the
+next second, my speed is <em>still</em> 4 m/s (right plot) and I travel another
+4 m (left plot). The <em>slope</em> of the quantity $x$ plotted as a function
+of time $t$ is the constant $\Delta x /\Delta t$ which I pointed out is
+the <em>slope</em> of the curve. That’s easy since the speed is constant.</p>
+
+<p>Now, suppose I speed up to pass the cyclist in front of me. My speed
+increases and I cover ground at a faster rate: during each time
+interval, I travel more than the time before. Of course now I’m
+accelerating if I’m going faster during each interval (“decelerating,”
+if I’m going slower). In either case, the state of my motion <em>is</em>
+changing from my previously steady speed. As we’ll see, if the state of
+my motion is changing, there’s a force: which I’ve applied by pumping my
+legs faster and faster, which is transmitted as a push on the road
+(Earth) through the rubber tires.</p>
+
+<p>Figure [constantacceleration] shows the predictive power of kinematics
+when applied to <em>constantly</em> accelerated motion. The curve on the right
+shows a <em>fixed</em> <em>acceleration</em> of 2 m/s$^{2}$. If this were a car, it’s
+like your foot is on the accelerator in order to maintain a constant
+force and hence, a constant acceleration on your bike, you need to
+overcome friction and wind, so maintaining a constant force on the
+pavement is hard work. This constant acceleration means that the
+velocity is changing at a constant rate—proportional to time—and that’s
+shown in the middle plot. So, at 6 seconds, your acceleration is
+2 m/s$^{2}$, and your velocity or speed has increased to 12 m/s from the
+start. In the mean time the distance you traveled is going up faster: it
+increases proportionally to the square of the time and this is shown in
+the left hand plot. If you started from rest, at $x=0$, by the time 3
+seconds have passed, you’ve traveled 9 meters, and by a total of 6
+seconds, you’ve gone 36 meters, so your distance intervals are
+increasing with each increment of time.</p>
+
+<p>Finally, thought of geometrically, the slope of the middle plot is
+constant—the change of speed with respect to time increases at a steady
+rate, the value of the constant acceleration. But, now the slope of the
+left hand plot of distance changing in time is <em>not</em> constant—at each
+successive time interval, it’s steeper and that’s reflected in the fact
+that the middle plot value changes at each time and so <em>instantaneously</em>
+(the tangent, if you want to be fancy), the speed is different and so
+the distance increases.<sup id="fnref:2"><a href="#fn:2" class="footnote">4</a></sup></p>
+
+<p>So for the constant acceleration (right hand plot, $a=$ constant), which
+results in a steadily (linear, $v \propto t$) increasing speed (middle
+plot), the changing distance covered per unit time increases a lot: the
+shape of that curve (right plot) is a parabola, $x \propto t^2$:
+[motion4] Observing this parabolic, or quadratic, increase in distance
+with respect to time is the smoking gun for constant accelerated motion.</p>
+
+<p>Now go back to our trip up north and in particular, Fig. [upnorthxvt].
+We can see that those constantly accelerated regions are parabolas,
+turned down for slowing down between B and C, and turned up for
+constantly accelerating between D and E. Again, that deceleration at the
+end is not a parabola, so it’s not a constant deceleration as can be
+seen in Fig. [upnorthvvt]</p>
+
+<h2 id="special-kinds-of-acceleration">Special Kinds of Acceleration</h2>
+
+<p>We can categorize acceleration into three separate categories with what
+we now know.</p>
+
+<h4 id="zero-acceleration">Zero Acceleration</h4>
+
+<p>No acceleration indicates a constant velocity.</p>
+
+<h4 id="positive-and-negative-acceleration">Positive and Negative Acceleration</h4>
+
+<p>Positive and Negative accelerations mean very different things here and
+we’ll illustrate this with a simple pair of examples. When you leave the
+city limits, your speed goes from 35 mph to 55 mph, so the numerator in
+the definition of acceleration in Eq. [acceleration]
+<script type="math/tex">\Delta v = v - v\_0 = 55 - 35 = +20 \text{ mph}</script> and this would be a
+positive acceleration (when you divide by the time it takes), or just
+“accelerating.” But when you come into town from the highway, your speed
+goes from 55 mph to 35 mph and the numerator in the acceleration
+equation <script type="math/tex">\Delta v = 35 -
+50 = -20 \text{ mph}</script> would be a <em>negative</em> acceleration, which is
+called a <em>deceleration</em>. So acceleration is negative or positive by
+virtue of whether the object is slowing down or speeding up.</p>
+
+<h4 id="varying-acceleration">Varying Acceleration</h4>
+
+<p>One more time for Fig. [upnorthvvt]. At any particular point in time,
+the value of this graph gives the <em>instantaneous</em> speed while the slope
+at any point gives the instantaneous acceleration. Instantaneous
+quantities were unimaginable before Isaac Newton, so this would have
+been a confusing thing even for Galileo. Let’s think about what it means
+to take an average…a simple one, of two quantities.</p>
+
+<p>Suppose we want the average height of two people, one of whom is 5 ft
+tall and the other, 6 ft tall. You’d calculate:
+<script type="math/tex">\text{average height } = \frac{5 + 6}{2} = 5.5 \text{ ft}.</script> The same
+thinking applies to motion—if, and only if the acceleration is constant.
+So, in our trip, if at some point we were traveling at 80 mph when we
+saw the state police car (point B) and 50 mph when we slowed down (point
+C), what was our average speed during that time? Just like the average
+of heights, it would be
+<script type="math/tex">\text{average speed} = \bar{v} = \frac{1}{2}(v+v\_0)=\frac{50 + 80}{2} = 65 \text{ mph},</script>
+[motion3] where I’ve introduced another notation that we’ll sometimes
+use: an average of a quantity is represented with a bar over the top.</p>
+
+<p>The average deceleration during that slow-down from Gaylord, MI at point
+F is over a long time interval, and you’d watch your speedometer
+steadily reporting a lower and lower speed. It’s really not reporting an
+instantaneous speed, since the electronics reporting what you read on
+the speedometer is really calculating an average speed over very small
+digitally-computed time windows.</p>
+
+<p>We could calculate over a smaller time interval, and then a smaller one
+and of course are we really even going precisely at an absolutely
+constant speed? That is, we could imagine decreasing the time interval
+all the way to zero, at which point we’re doing calculus. We don’t need
+to do that, but we should remember that for any finite time interval,
+all of the displacement formulas are really averages. But the fact that
+the slope of the velocity curve in the F to G segment of
+Fig. [upnorthvvt] is of all different values shows that this is not
+constantly accelerated or constantly decelerated motion.</p>
+
+<p>Cars are not the only place where we encounter non-constant accelerated
+motion. How about running? A sprinter comes out of the blocks with a
+very high change of speed, and so a very high acceleration. As she gets
+into her stride and become more erect, her effort must fight against
+wind resistance and besides, her internal quick expenditure of energy
+would be hard to maintain, so there’s a <em>reduction</em> of acceleration.
+Note this doesn’t mean a reduction in velocity, just that the velocity
+increases at a slower rate as the race goes on. Nor does it mean a
+deceleration…she’s still going faster, just at a lesser rate than
+before.</p>
+
+<p><span>sprinterqr.png</span><span><span>motion</span>/sprinter</span><span>Which
+graph of velocity versus time for a sprinter matches the description of
+a runner from the
+text?</span><span>2.5</span><span>sprinter</span><span>0.5in</span><span>Sprinter
+Graph</span></p>
+
+<p>The figure that you just chose shows the increase of speed of a
+sprinter: start fast and then level off in almost constant speeds.
+Figure [madden] shows how the designers in <em>Madden Football ’11</em>
+modeled the rate of speed of one of the players in the game.</p>
+
+<h4 id="constant-acceleration">Constant Acceleration</h4>
+
+<p>From the above figures and our experience it’s plain that everyday
+motion would likely involve accelerations that vary in time—like the
+slope of the realistic sprinter graph above— changes almost throughout
+the run, starting out very high and becoming smaller. But historically
+and practically there is a special, constant, acceleration.</p>
+
+<h1 id="galileo-and-free-fall">Galileo and Free Fall</h1>
+
+<p>Galileo is revered in physics for essentially creating two modern
+sciences (physics and astronomy), and for enunciating the principles of
+how science should work that are still relevant today. Very early on he
+recognized that the unnatural/natural motion notions of Aristotle were
+wrong. For example, Aristotle insisted that two objects made of the same
+material but of different weights would not hit the ground at the same
+time if dropped. The heavier one would be more “eager” to go to its
+natural place (the Earth’s center) than the light one. Or an object that
+was more earthy (like a rock) would fall faster than an object that’s
+less earthy (say a stick) even if they weighed the same…again, the
+more earthy the object, the more anxiously it tended towards the center
+of the Earth which was…well, totally earthy. Galileo simply watched
+that hail stones of differing sizes seemed to hit the ground at nearly
+the same time which was not consistent with the Aristotelian ideas, and
+that caused him to “think different.”</p>
+
+<p>It had “been in the air” for a century that the speeds of falling
+objects increase either in proportion to increasing <em>distance</em> or
+increasing <em>time</em>. All one had to do was watch water drips from a
+roof…the distances that they travel in a given time are much longer
+near the ground than when they first leave the edge. So they are
+accelerating, but which way? Long before Galileo, smart philosophers at
+Paris and Oxford realized that if, during equal time intervals, the
+distance of a falling object increased like the squares of the time
+interval…then the speed must increase proportionally with time, This
+was pretty sophisticated geometrical reasoning for people without
+algebra, graphs, or graphical representation of functions. Remember,
+from what we know from the above discussion, this quadratic time
+dependence told him that gravity produced a constant acceleration.</p>
+
+<p>Galileo first started to think differently about motion when he was a
+professor at Pisa. That’s where he was supposed to have dropped a wooden
+and iron ball from the Leaning Tower, although we know that he couldn’t
+have done it the way the story went. His unpublished pamphlet on motion
+was a mixture of old language and his attempts at a new one, and so was
+not quite there yet.</p>
+
+<h2 id="pisa-to-padua">Pisa To Padua</h2>
+
+<p>His salary was abysmally low and he was clearly ready for a more
+lucrative position. So after three years in Pisa, when he was offered a
+job at the University of Padua he took it and stayed for 18 years until
+1610. Not only was his salary higher, the Venetian Republic was a much
+more independent region of Italy. Indeed, unlike Florence in Tuscany
+where connections to Rome and the Papacy were long-standing, Venice was
+often in the Papal Doghouse for its independent ways. Here Galileo was a
+popular professor, he created tools for military use that he was able to
+sell, including a manual. He settled into a common-law relationship with
+a woman with whom he had three children. But money was always
+problematic and they even took in students for tutoring and rent into
+their crowded home.</p>
+
+<p>While Galileo was in Padua, he resumed some of his earlier experiments
+with moving objects. His original ideas were unformed but he reworked
+them as he shed his Aristotelian influences. There he had a workshop and
+eventually hired a toolmaker.</p>
+
+<h2 id="the-pendulum">The Pendulum</h2>
+
+<p>A pendulum is a trivial toy, yet it encompasses many key physics ideas
+about motion and force. Galileo, Huygens, and Newton each made many
+pendulums and did extensive experiments with them. Because of its
+immediate simplicity, quantitative measurements are easily done with
+modest tools. It will come up over and over! Figure [simplependulum]
+is a picture of a simple pendulum which I’ll refer to periodically over
+the next few chapters.</p>
+
+<p>Among the surprising facts about a pendulum, no matter where you release
+the bob, it takes the same amount of time to make a complete back and
+forth. That is in Fig. [simplependulum], $h_C = h_A$. Except that’s
+not true. Only for very small values of $\theta$ (which is the same as
+making $h_A$ relatively small) does this approximately work. For
+Galileo, the differences were small enough that he presumed that the
+pendulum’s motion is isochronous, that is, that it swung back and forth
+in equal times.</p>
+
+<p>Galileo first studied the pendulum in Pisa. The initial striking result
+that he noted was that the bob will make a complete arc, following a
+circle, sweeping through point B and come to rest to essentially the
+same height from which it started, at C. He pushed against this result
+by putting a peg in the way at D and the bob still returned to the same
+height, now at E as in Fig. [pendulumInclines]a. The second thing he
+noticed was that the time that it takes to make one compete oscillation
+from the higher point <em>is the same</em> as when it was started from the
+lower position. In fact, he found that the <em>period of oscillation</em>—how
+long for a back and forth trip—only depends on the length of the cord.
+Not the mass of the bob and not the material of the bob.</p>
+
+<p>This led him to make the leap from pendulums to motion in general and in
+Padua he began to experiment with inclined planes. Suppose you have two
+inclined planes opposite one another, like in Fig. [pendulumInclines]b
+and you start a ball rolling from the top of the left-hand inclined
+plane at A, it will fall to B and then rise to pretty nearly the same
+height on the right-hand one at C. Like the pendulum.</p>
+
+<p>Now, make the angle of the right hand plane smaller so that the ball has
+further to go to reach the same height, now at D. He reasoned, it still
+would and showed that. Now, here’s the genius part: suppose you lower
+the right-hand plane more and more until it’s flat. What does the ball
+do now? Galileo said it would roll forever. He then packaged that
+reasoning into a statement that Newton appropriated nearly 60 years
+later: that an object that’s started in motion on a flat plane will
+continue forever, unless something stops it. No pushing involved. Once
+it’s started, it goes. Notice how far behind Aristotle looks in
+Galileo’s rear view mirror! He’s not worried about natural or unnatural
+motion and he’s not concerned himself with <em>why</em> the motion continues.
+Rather he’s asking different questions…<em>How</em> questions rather than
+<em>Why</em> questions. Aristotle’s students would start with a philosophical
+prejudice and interpret what they saw in accordance with that
+philosophical system. Galileo threw all of that aside and observed
+nature without bias or preconceived notions. So if you release the ball
+in Fig. [pendulumInclines] <em>where would it go?</em> is his question. Not,
+<em>why</em> would it go. And he’d set up the circumstance and observe it—no
+Aristotelian would do an experiment. They would think about it in the
+specific context of the philosophy and passively observe.</p>
+
+<p>The other important thing is that Galileo was fully aware that there
+were a whole host of impediments to a pendulum going back and forth
+forever, or even coming back to the original point after one swing. In
+fact—<em>and this is important</em>—he imagined that the real rules of pendulum
+motion were those of the zero friction limit and that our actual pendula
+are incremental modifications to the true situation through successive
+addition of friction, air resistance, stretching of the string, etc.
+Likewise, with the rolling ball struggling up the right hand incline
+there are overlays of real impediments to the otherwise perfect motion.
+The bob nor the balls really, exactly came back to their starting
+points…just really close. Plus nearly every event would be slightly
+different. But rather than dwell on the differences, Galileo was the
+first to decide that there was *something that was the same in every
+event*.</p>
+
+<h2 id="free-fall">Free Fall</h2>
+
+<p>The big question for Galileo (and many others) was to explain the
+behavior of falling objects. What rules govern how fast an object falls.
+Aristotle said that an objects “nature” was the cause and that its
+determined how fast. Clocks didn’t yet exist, and so even Galileo
+couldn’t drop something and measure the time for it to fall, even from
+very high places.</p>
+
+<h3 id="what-did-he-do-what-did-he-do">What Did He Do? {#what-did-he-do?}</h3>
+
+<p>But he invented a trick…a way to dilute gravity so that he could make
+timing measurements using 16th century tools. Suppose instead of
+dropping a ball, you rolled it down an incline from the same height. He
+hypothesized that whatever pull a ball felt in free-fall would still be
+there in the slow descent down an incline. If he made the slope so
+shallow that the ball would roll (“fall”) slowly enough, he could
+measure it and sneak up up on the rate of falling directly. He found
+that inclines of only two or three degrees were ideal.
+Figure [inclineIdea] shows the setup.</p>
+
+<p>Three different distances are indicated for the ball. The ball starts
+from point A and rolls down the plane to point D along the path $\ell$
+taking some time to get there. We can ask about the separate “motions”
+in the horizontal and vertical directions since the path is in the
+plane. So along the $x$ axis, the ball goes from point A to point B and
+it “falls” in the vertical direction along the $y$ axis from point A to
+point C. A little bit of trigonometry shows that the rate that the ball
+travels along $\ell$ is the same as the rate to fall along the $y$ axis.
+So all he needed to do was measure how far the ball rolls along $\ell$
+in each increment of time. That same rate would be the free-fall rate.
+Pretty clever.</p>
+
+<p>Galileo was good with his hands, and armed with the understanding that
+he needed to reduce the effects of friction and other extra impediments
+to determining the real rules, he built inclines with finely machined
+grooves to minimize the effects of friction and then made elaborate
+schemes to measure the time that it took for an object to “fall” as it
+rolled slowly down the incline. He used his pulse. When that wasn’t
+sufficiently regular, he hired a string quartet to play at an even
+meter. He then built a “water clock” that slowly dripped at a regular
+rate and it was with that, that he was able to see how far a ball would
+roll during each “tick” of his water clock. Galileo kept careful records
+of his experiments and these have been preserved. Fig. [drake1] shows
+the aha! moment in one of his pages where he’s taking his measurements,
+scribbling around the sheet, and keeping his records in the upper left
+hand corner. The late Stillman Drake from the University of Minnesota,
+the preeminent Galileo scholar, has studied these notebooks and on this
+particular page, he noticed that the ink used in the column with the
+squares was different from the ink in the actual data-taking. In fact
+that ink was consistent with pages that came from entries many days
+later. Clearly Galileo had taken the data, then pondered the results and
+realized later that his measurements fit the square-time rule and came
+back to the page to add them in. Imagine what his emotional state must
+have been when he realized what he’d done!</p>
+
+<h3 id="little-g">Little $g$</h3>
+
+<p>What he was discovering was the shape of the left graph in
+Fig. [constantacceleration] (plotted for his data in Fig. [drake1]
+as the white inset) that the distance is quadratic in the time traveled,
+like we saw in Eq. [quadtime]. Quadratic? He knew that meant a
+constant acceleration is at work for his rolling objects. He then went
+one step further. By measuring the results with balls of differing
+materials and weights he found that they all showed the same result.</p>
+
+<p>Now the big leap…so to speak. He reasoned that the same would be the
+result of dropping objects vertically. Casting aside 1,500 years of
+Aristotle’s insistence that the heavier, most “earthy” objects would
+fall much faster, Galileo insisted that all objects would fall with the
+same acceleration and that the distances would increase like the square
+of the time.</p>
+
+<p>Today we write: <script type="math/tex">x = \cfrac{1}{2}gt^2</script> where we give this special,
+constant acceleration a name, the “acceleration of gravity,” $g$, or
+“little g” which is roughly 32 ft/sec/sec, or 9.8 m/s$^2$ which was
+first measured by Isaac Newton a generation later…using pendulums.</p>
+
+<p><a href="#what-did-he-do?">What Did He Do?</a></p>
+
+<p><span>**Objects near the Earth’s surface fall with essentially constant
+acceleration.**</span></p>
+
+<p>He then made yet another important leap: In practice, a heavier object
+might hit the ground slightly before a lighter one, but he correctly
+reasoned that this was because the effect of the resistance of the air
+would be a larger retarding force on the little ball than on the heavier
+one. [crumpled] Now he’s doing physics. He was after Nature’s “real
+rule” which was hidden behind the apparent motion, affected by the air.
+He was exploring what’s the same about falling objects, not what was
+different about them.</p>
+
+<h4 id="air-resistance">Air Resistance</h4>
+
+<p>Little $g$ is a large acceleration, but raindrops don’t usually bruise
+us and hail stones don’t usually kill. Were there not for air
+resistance, nice spring showers would be dangerous as rain drops fall a
+long way! It turns out that things dropped from high up reach a speed in
+which the viscous drag of air friction pushes back with the same force
+that the Earth pulls, causing a falling object to reach equilibrium. The
+result is that the speed of falling becomes constant to what’s now
+called the Terminal Velocity, which depends on an object’s size.</p>
+
+<p>For example, a regulation major league baseball will reach terminal
+velocity in about two and a half seconds after falling about 100 ft. At
+that point, its speed will be just about 60 mph and will stay at that
+value. For reference, the “Green Monster” left field wall in Fenway Park
+is about 40 feet (11 m) high, so you can see that high fly balls would
+be high enough to reach terminal velocity on their way down.</p>
+
+<p>The saga that he dropped balls from the Leaning Tower of Pisa while a
+faculty member there, surrounded by all of the members of the student
+and faculty body was told by one of his ardent followers after Galileo’s
+death. There is no evidence that this public event ever happened, and
+Galileo himself never described doing such an experiment. This same
+disciple also told a story that as a child he sat in the Cathedral of
+Pisa and while bored during mass timed the candelabra overhead and from
+that experience reasoned his pendulum rule later. The tale had young
+Galileo making these measurements with a candelabra that were not
+installed in the cathedral until many years after the event was said to
+have taken place. So there’s much to be wary of in Galileo-lore as told
+by his young admirers.</p>
+
+<p>While Galileo was on the faculty at Padua, he did other experiments with
+motion which lay dormant until in 1638 he wrote the second of his great
+books, *Discourses and Mathematical Demonstrations Relating to Two New
+Sciences*. He finished this work while in house arrest outside of
+Florence as an old, sick man. How he got into trouble is a story that
+we’ll leave for our discussion of early astronomy.</p>
+
+<h3 id="the-equations-of-constant-acceleration">The Equations of Constant Acceleration</h3>
+
+<p>Acceleration at $g$ is called…well, “gees.” And “pulling gees” is a
+measure of acceleration that fighter pilots must contend with: in order
+to not black out, humans can tolerate accelerations up to around 6
+$g$’s, or $6\times 9.8$ m/s$^2= $ about 60 m/s$^2.$ That’s moving right
+along as you will see from the Porsche-experience below.</p>
+
+<p>The plots for motion had their origins with Galileo, but their algebraic
+form waited for the 17th and 18th Centuries to become standard. Our
+formulas so far can be summarized here: <script type="math/tex">% <![CDATA[
+\begin{aligned}
+ \label{kinematicseq}
+\text{(page\~\pageref{motion1})} \;\;\;\;\; x\_{\mbox} &   = \frac{\Delta x}{\Delta t} =\bar{x} \\
+\text{(page\~\pageref{motion2})}  \;\;\;\;\; v                                                       & = v\_0 + at \label{vsimple} \\
+\text{(page\~\pageref{motion3})}  \;\;\;\;\; v\_{\mbox}    &   = \half (v+v\_0)  = \bar{v}\\
+\text{(page\~\pageref{motion4})}  \;\;\;\;\; x                                                   &   = x\_0 + v\_0t + \half at^2 \\
+	                                                             v^2                                                &   = v_0^2 + 2ax \label{v2}\end{aligned} %]]></script>
+Obviously, if the motion starts from rest, then the initial velocity is
+zero ($v_0=0$) and we can often easily define our coordinate system so
+that the initial starting point is set to zero ($x_0 =
+0$).</p>
+
+<p>Let’s work out what the acceleration would be for cars that you may or
+may not drive. How long does it take your car to go from 0 to 60 mph? If
+you own, say, a Mitsubishi Mirage ES, it will take you around 12 seconds
+to get to sixty. If you own a Porsche 911 Carrera S, it will take you
+closer to 4 seconds.</p>
+
+<p><span>The Slow Ride</span><span>What’s the acceleration of the
+Mitsubishi in m/s$^2$?</span></p>
+
+<p>From the above equations, we can see that if we start from rest, then
+$v_0 = 0$ and we can calculate: <script type="math/tex">\begin{aligned}
+ v\_M = a\_M t\_M \\ a\_M = \frac{v\_M}{t\_M} \end{aligned}</script> But we need
+metric units, so we can refer to Fig. [vandmconversion] and see that
+60 mph is just about 26 m/s. So for 12 seconds, we get <script type="math/tex">% <![CDATA[
+\begin{aligned}
+ a\_M &= \frac{v\_M}{t\_M} \\ a\_M &= \frac{26}{12}  \approx 2
+\text{ m/s}^2 \end{aligned} %]]></script> Not exactly like falling off a log…or
+falling off of anything for that matter, since it’s almost 5 times less
+acceleration than 1 $g$! If you black out while speeding up with your
+Mitsubishi, it’s not because of acceleration.</p>
+
+<p>These two states of motion—constant velocity and non-constant
+velocity—are very different. We’ll see in our discussion of Relativity
+just how different, but let me let the cat out of the bag right here.
+Have you ever been in a train or a car where you’re relatively enclosed
+and can only see a car or train next to you and not the earth? If the
+adjacent vehicle starts to move you can be suddenly confused: who moved?
+You might actually not know! I find that unsettling, and my brain
+quickly tries to figure it out. This is an inherent feature of constant
+velocity motion: there is no “right” answer as the same unsettled
+feeling would be felt by a passenger on the other train. Both are
+equivalent situations relative to one another. There. I’ve said the word
+“relative” and you now have the hint of only a part of what’s
+interesting about Einstein’s theory of <em>relativity</em>.</p>
+
+<h2 id="going-in-the-right-direction">Going In the Right Direction!</h2>
+
+<p>Now we need to add one more piece to the modern story. As we saw in the
+Tools chapter, distances—displacements—are vector quantities. Because
+distance is in the definition of velocity, and since distance is a
+vector, so is velocity. Since velocity is a vector and acceleration is
+defined in terms of it? Yes, acceleration is a vector too.</p>
+
+<h3 id="velocity-is-a-vector">Velocity Is a Vector</h3>
+
+<p>Here’s our first physics-vector. I’ve been loose in the use of the words
+speed and velocity. In fact, there’s a difference: velocity is a vector,
+$\vect{v}$, and so it includes a magnitude and a direction, and the
+magnitude of velocity is the speed. Now the definition should really be:
+<script type="math/tex">\vect{v} = \frac{\Delta \vect{x}}{\Delta t}</script> Notice, that I’ve
+implicitly included distance ($\vect{x}$) as a vector quantity, but not
+time. North and east are different directions and $\vect{x}$ makes that
+clear. Like mass, temperature, and many other quantities, time is not a
+vector. At least, not yet!</p>
+
+<p>So 60 mph east is not the same velocity as 60 mph north. The speeds are
+the same, but the velocities are different. And, certainly if you’re
+trying to go north, you don’t want to deploy a <em>velocity</em> that points
+east. So both the magnitude (speed, here) and the direction are required
+to specify a velocity. We simply draw an arrow, the direction of which
+points in the direction of travel and the length of which is defined by
+some scale of speed magnitudes.</p>
+
+<p>Now when you’re walking I want for you to invent your own speed
+scale—how many inches equals 1 mph of speed— and then imagine this arrow
+sticking out of your chest. As you speed up, the arrow gets longer and
+as you slow down, the arrow shrinks. If you turn left, the arrow turns
+with you. Everywhere you go, you imagine your very own velocity arrow
+preceding you. You should also imagine arrows coming out of everyone you
+see, people on bicycles would have longer arrows and cars would have
+even longer ones. When they come to a stop sign? The arrow disappears.
+Keep this in mind as we move on to those length-changing arrows.</p>
+
+<h3 id="acceleration-is-a-vector">Acceleration Is A Vector</h3>
+
+<p>Since velocity is a vector and acceleration is defined in terms of
+velocity, it too is a vector:
+<script type="math/tex">\vect{a} = \frac{\Delta \vect{v}}{\Delta t}.</script> While the little arrow
+that represents your personal velocity is always point out in front of
+you, its direction seems rather arbitrary. It goes where you go, but
+there’s nothing special about the direction. But that’s not really the
+case since our movement is inside of a coordinate system of streets,
+sidewalks, hallways, etc. and they all have relative directions.</p>
+
+<p>So let’s for a minute remember the obvious…if we take our coordinate
+system to be (arbitrarily) that to go east is to go in a positive
+direction and west, a negative direction then you could describe your
+vector that way. If you’re walking east, then you could say your
+velocity is 2 mph, east, or you could say that your velocity is +2 mph.
+If you’re walking to the west, your velocity would be -2 mph. The
+direction and the sign are mingled. Because we will work in one
+dimension most of the time, this dual-role for a sign will matter but
+hopefully be pretty easy.</p>
+
+<p>This is important as we consider the direction of an acceleration.
+Suppose your speed is 60 mph and after a certain time—let’s say 2
+hours—your speed has increased to 70 mph. Remembering our ordering in
+the $\Delta$ notation of ( now - before), then then the magnitude of
+your acceleration would be:
+<script type="math/tex">a = \frac{\Delta v}{\Delta t} = \frac{70-60}{2} = 5 \text{ miles per hour}^2</script>
+Now what if your original speed is reduced because you applied the
+brakes from 70 mph to 50 mph. Then we’d have:
+<script type="math/tex">a = \frac{\Delta v}{\Delta t} = \frac{50-70}{2} = -10 \text{ miles per hour}^2</script>
+What are we to make of that negative sign? Of course it means we’re
+slowing down, and we learned that the term for that is deceleration. But
+that pesky sign change between accelerate and decelerate is again
+related to our coordinate system. If we continue to take east as
+positive, and have both of our circumstances—the acceleration to 70 mph
+and the deceleration from 70 mph—be easterly motion, then that algebraic
+negative sign that came from the calculation plays a geometrical role.</p>
+
+<p>Now you have two vectors point out of your car’s hood. First we have the
+velocity vector, which is always positive as long as we’re traveling
+east, albeit getting longer in the one case and shorter in the other.
+Then we have also an acceleration vector that points to the east when we
+accelerate (corresponding to the change of the speed being positive) but
+points west when we decelerate. That’s what the negative sign does, it
+changes the direction of the acceleration vector. Let’s see how this
+works.</p>
+
+<h3 id="what-goes-up-must-come-down">What Goes Up, Must Come Down</h3>
+
+<p>Armed with Galileo’s discovery and our notion of vectors, the
+acceleration felt by all falling objects near the Earth is constant, we
+can look at some examples. Let’s drop something from the Leaning Tower,
+in honor of fictional accounts of famous scientists.</p>
+
+<p>Mr. Google tells me that the height of the Leaning Tower is 183 ft. By
+now, you know how to convert that to meters and it’s 57 m. The first
+thing to realize is that a baseball dropped from the Leaning Tower at
+this height would likely reach terminal velocity. But let’s ignore that
+for a moment—we will pretend that the atmosphere doesn’t exist—and look
+at Fig. [tower] for the arrangement.</p>
+
+<p><span>That Leaning Tower</span></p>
+
+<p>Drop an apple from the Leaning Tower of Pisa, all 57 meters.</p>
+
+<ul>
+  <li>
+    <p>Draw a picture that shows the rock on its way down twice…near the
+   top and near the ground: draw a representation of the distance
+vector, the velocity vector, and the acceleration vector on
+the rock.</p>
+  </li>
+  <li>
+    <p>How fast is a rock moving just before it hits the ground?</p>
+  </li>
+  <li>
+    <p>How long does it take to hit the ground?</p>
+  </li>
+</ul>
+
+<p>[tower1]</p>
+
+<p>Always draw a picture. We’ll take the positive $x$ axis to be pointing
+down, in the direction of $\vec{g}$ and the direction of $v$, so both
+are positive and increasing in magnitude. Figure [tower] shows the
+situation and the various vectors. The distance axis is on the left
+side. On the right side of the figure are the kinematical vectors. The
+velocity vector gets longer as the apple falls and the acceleration
+vector stays the same. Notice that there is an acceleration at the top.</p>
+
+<p>We can use various of the equations from the set in
+Eqs. [kinematicseq]. To find the time, for example, we can use
+$    x = x_0 + v_0t + \half at^2$. We defined our coordinate system so
+that $x_0=0$ at the top of the tower. And since it’s dropped from rest
+without being thrown down, $v_0=0$. And we can then calculate the time
+when $x=57$ m: <script type="math/tex">% <![CDATA[
+\begin{aligned}
+x       &   =  \half gt^2 \nonumber \\
+2x/g &= t^2 \text{ so }
+t = \sqrt{2x/g} = \sqrt{\frac{(2)(57)}{9.8}} = 3.4\text{ s}\end{aligned} %]]></script>
+In order to calculate the speed at the bottom, we could use a couple of
+equations. We could use: <script type="math/tex">% <![CDATA[
+\begin{aligned}
+v^2 &= v\_0^2 + 2ax = 0 + 2(9.8)(57) = 1117 \\
+v &= \sqrt{1117}=33.4\text{ m/s}\end{aligned} %]]></script></p>
+
+<p><span>tower</span><span>tower</span></p>
+
+<p>Now, you do it. Closer to home.</p>
+
+<p><span>apple1qr.png</span><span><span>motion</span>/apple1</span><span>Instead
+of dropping something from the Leaning Tower, drop an apple from a table
+to the floor, 1 meter down. What’s its speed just before it hits?
+Calculate it in m/s and pretend that $g=10$ m/s$^2$…it’s
+close!</span><span>4in</span><span>applemotion</span><span>0.5in</span><span>Apple
+Motion</span></p>
+
+<p>In fact, while the above illustrations are elementary, they lead us to
+practical and interesting questions. For example, suppose I throw a ball
+straight up. We could analyze the velocity vector on the way up and the
+way down and the acceleration vector during the same trip. Galileo’s
+assertion that the acceleration is constant for all objects, we
+interpret as the acceleration vector of constant length pointing <em>down</em>
+throughout the path, up and down. What about at the very top? Is it
+accelerating? Yes. Is it moving? No.</p>
+
+<p>One of the biggest indignities that Aristotle’s motion suffered was
+trying to explain projectile motion. Galileo has that covered too.</p>
+
+<h1 id="projectiles-sec-projectiles">Projectiles {#sec: projectiles}</h1>
+
+<p>Although we’ve been dealing with 1-dimensional motion, Galileo wasn’t
+done when he figured out that everything falls at the same, constant
+acceleration of gravity. He also tackled the other problem that
+Aristotle messed up: throwing something. With an understanding that
+objects would happily move at a constant speed without being pushed (his
+two inclined planes) and that objects fall towards Earth with a common
+acceleration, he had the genius idea to embed these two different
+motions together into the motion of a single, thrown object. Let’s
+follow his experiment by looking at his notes in Fig. [drake2].</p>
+
+<p>What you see are various measurements of rolling a ball off the surface
+of a table and marking where it lands according to how fast it was
+going. How did he repeat measurements so that each attempt would be the
+same speed upon lift-off? He rolled them from an inclined plane where he
+could dial-up the speed he wanted by how far up the plane he let go of
+the ball as shown in Fig.\~[projectiletable]. Clever, no?</p>
+
+<p>So let’s think like he did. If the speed of the ball at B is $v_x$, then
+what’s the speed of the ball just at the edge of the table, C? $v_x$.
+Now the ball acquires two separate motions that are combined: the ball
+<em>continues</em> to have the horizontal speed, $v_x$. But as it falls, it
+starts to acquire a <em>new vertical speed</em>, accelerated down by $g$. The
+two motions are separate, but together! So throughout the trajectory,
+the ball’s <em>horizontal speed remains</em> $v_x$. Nothing has happened to
+change that. The ball’s <em>vertical speed increases</em> as the ball “falls”
+along this curved path.</p>
+
+<p>Now here’s the neat thing. Suppose at the same point where the ball
+leaves the table, another ball is allowed to just drop from that point,
+say at point C in Fig. [projectiletable] so that it falls (under the
+influence of gravity!) to point E. This one has only one kind of motion,
+vertical and accelerated. In fact, it’s accelerated by the same amount
+as the first one and from the same vertical height, at the same time. So
+which one reaches the floor first? They both reach the floor at the same
+time.</p>
+
+<p>This bundling up of two separate motions into one object was pure
+genius. Nobody had ever conceived of that sort of thing. By analyzing
+the landing point and some sophisticated solid geometry, he was able to
+extrapolate to perfect conditions and assert that the trajectory that
+the ball followed was that of a parabola.</p>
+
+<p>Now let’s take this to the act of actually throwing something. Refer to
+Fig.\~[projectile].</p>
+
+<p>Here I’ve put on the diagram the separate components of the ball’s
+velocity, horizontal and vertical. Throughout the path the horizontal
+velocity that the thrower originally provided (because she didn’t throw
+the ball straight up, but at an angle relative to the horizontal) is
+unchanged.</p>
+
+<p>But the vertical component of the velocity points up until the top.
+Then, down on the way, well, down. If you’ve ever watched a towering
+home run, you know that the baseball does not follow a perfect parabola.
+Rather it falls to Earth relatively more quickly than it took off and so
+the trajectory is shorter down than up. The forces that an actual ball
+feels are two: there’s the force of the Earth’s gravity, always down.
+But there’s also the force of resistance that the air presents to the
+ball and its direction is precisely the opposite of the ball’s actual
+direction. The faster the ball goes, in most instances in a fluid, the
+harder that force of resistance becomes. So as the ball gains speed from
+gravity, it loses some speed due to deceleration from resistance
+force…which increases as the ball falls and hence changes the trajectory
+from parabolic.</p>
+
+<p><span>**Projectiles on the Earth follow essentially parabolic
+trajectories.**</span></p>
+
+<p>In Chapter [diagrammatica1] we’ll begin to develop a graphical way to
+approach things that move. We’re going to learn to draw Feynman Diagrams
+in Spacetime. Not your father’s physics book, this one.</p>
+
+<h1 id="the-beginning-of-physics-sec-eginningphysics">The Beginning of Physics {#sec: eginningphysics}</h1>
+
+<p>When Galileo reached the conclusion that all objects fall to Earth with
+the same acceleration, he was going against what he—and Aristotle, and
+everyone else—actually observed. An iron cannonball <em>would</em> be observed
+to reach the ground faster than a wooden one and as you saw in your
+crumpled paper experiment from page , the same object would be observed
+to fall at different rates depending on its shape. So how in the world
+could he insist that there is a uniform rule, in spite of these
+undeniably different outcomes?</p>
+
+<p>Today you’d say “wind resistance” as an explanation of any differences
+observed of falling objects and you would be right. But for a 17th
+century thinker, this was a stretch. Galileo said that it’s not
+sufficient to just observe and describe what happens because effects
+like friction are hiding what Nature <em>really wants</em> to do! And
+uncovering those hidden rules is his science…and ours.</p>
+
+<h2 id="sec:pills">The Red Pill, or the Blue Pill?</h2>
+
+<p>This is very un-Aristotle. First of all, Aristotle would never have
+countenanced doing experiments. You can look at nature, but don’t touch.
+But Galileo was all about constructing experiments and making
+quantitative measurements of what he observed. This was new and
+recognizably “modern.”</p>
+
+<p>But there’s more. To him Nature’s rules are hidden to us. We can get
+close to them by reducing marginal effects like friction but then we
+have to extrapolate from what we see in our rough and ready laboratory
+to the hidden rules of a more perfect world. The pendulum bob gets close
+when it swings back, but the actual rule driving the motion would
+instruct the pendulum bob to come all the way back to the original
+height. That’s what’s real.</p>
+
+<p><em>I cannot over-emphasize how important this is.</em> This is very much
+Plato’s view of nature, not Aristotle’s. For Plato, The Real was perfect
+and with our poor, corrupt visual tools we can only perceive inferior
+copies of the real things—Platonic Ideals. While there is much that’s
+wrong with Plato’s philosophy, the uncovering of nature’s hidden
+order—free of imperfection—is the goal of modern science.</p>
+
+<h3 id="sec:father">The Father of Physics</h3>
+
+<p>Nobody had ever done what Galileo did in all of history. Let’s summarize
+his strategies:<br />
+<strong>First</strong>, Galileo chose not to explain nature (motion in his case) on
+the basis of logical argument from within pre-conditioned philosophy
+(neither Aristotle’s nor the Church’s): Galileo confronted nature
+without precondition: he assumed that Authority did not dictate how
+Nature is.<br />
+<strong>Second</strong>, rather than sit passively and observe, Galileo created
+artificial circumstances designed to explore particular questions: he
+assumed that Nature can be characterized by doing experiments.<br />
+<strong>Third</strong>, rather than report results as a narrative, Galileo made
+quantitative measurements under the assumption that arithmetical and
+geometrical constructions were descriptive of nature’s behavior: he
+assumed that Nature is mathematical.\</p>
+
+<p><span><strong>Nature appears to behave according to mathematics.</strong></span></p>
+
+<p><span><strong>Why is Nature inherently mathematical?</strong></span></p>
+
+<p>Those three strategies alone would make Galileo the first, great
+scientist. But he went further, and his Physics Paternity comes from his
+Platonism.<br />
+<strong>Fourth</strong>, Galileo chose to interpret nature as consisting of rules
+that can only be discovered by going beyond the rough regularities in
+our observations. Nature is best assumed to be simple and mathematical,
+but unfortunately all that we can observe is complicated by extraneous
+effects and the true nature…um, of nature is hidden, just out of
+grasp. Strip away complications like friction as best you can and
+through mathematical modeling and extrapolation we can uncover Nature’s
+hidden rules.<br />
+Without this <strong>fourth</strong> strategy, physics would be impossible.</p>
+
+<p><span>**The rules of Nature are often hidden from experiment and must be
+inferred by a combination of theoretical modeling and experimental
+confirmation.**</span></p>
+
+<p>Taken together, these four strategies form the modern-looking nature of
+physics.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:fools">
+      <p>He wrote low poetry making fun of them.&nbsp;<a href="#fnref:fools" class="reversefootnote">&#x21a9;&#xfe0e;</a></p>
+    </li>
+    <li id="fn:cause">
+      <p>There were a number of other issues with his physics, like his “four causes” which made things move because the had some desire to find a natural place. But we’ll not go there. Okay. I’ll go there a little. Motion was not only for moving objects in space. A cat growing into a kitten was a form of motion. A seed growing into a plant was a form of motion and the seed’s desire was to reach that plant-ness as a matter of fulfillment. Now take this into the kind of motion that we care about—his Locomotion—and you’ll see why I didn’t go there. Much.&nbsp;<a href="#fnref:cause" class="reversefootnote">&#x21a9;&#xfe0e;</a></p>
+    </li>
+    <li id="fn:time">
+      <p>This is often attributed to Einstein, Woody Allen, and John Wheeler! It actually comes from Ray Cummings’ short story <em>The Time Professor</em> from 1921. Stick with me. You’ll learn all sorts of odd facts.&nbsp;<a href="#fnref:time" class="reversefootnote">&#x21a9;&#xfe0e;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Notice that the maximum distance in the right hand figure is 100
+m, reached in about 10 seconds. Usain Bolt’s world record is 9.58 s.&nbsp;<a href="#fnref:2" class="reversefootnote">&#x21a9;&#xfe0e;</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <!-- My particular scripts -->
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+ <!-- My particular scripts -->
+
+    <script>
+
+    // Highlight search Query
+    var url = window.location.href;
+      if (url.lastIndexOf("?q=") > 0) {
+        // get the index of the parameter, add three (to account for length)
+        var stringloc = url.lastIndexOf("?q=") + 3;
+        // get the substring (query) and decode
+        var searchquery = decodeURIComponent(url.substr(stringloc));
+        // regex matches at beginning of line, end of line or word boundary, useful for poetry
+        var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
+        // get, add mark and then set content
+        var content = document.getElementById("main").innerHTML;
+        document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
+      }
+
+    // Toggle sidebar
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <!-- Facebook SDK for JavaScript -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '589495744558280',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+  </body>
+</html>

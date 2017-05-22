@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>“QS&BB”</title>
+ <link href="http://qstbb.pa.msu.edu//ed/atom.xml" rel="self"/>
+ <link href="http://qstbb.pa.msu.edu//ed/"/>
+ <updated>2017-05-22T11:32:25-04:00</updated>
+ <id>http://qstbb.pa.msu.edu/</id>
+ <author>
+   <name>Chip Brock</name>
+   <email>brock@pa.msu.edu</email>
+ </author>
+
+ 
+
+</feed>

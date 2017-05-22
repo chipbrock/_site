@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <!-- Canonical link to help search engines -->
+  <link rel="canonical" href="/ed/lectures/SpecialRelativity1_1/"/>
+
+  <!-- Basic meta elements -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+
+  <!--   Dublin Core metadata for Zotero -->  
+  <meta name="DC.title" content="Relativity" />
+  <meta name="DC.creator" content="Chip Brock" />
+  <meta name="DC.contributor" content="" />
+  <meta name="DC.date" content="" />
+  <meta name="DC.rights" content="" />
+  <meta name="DC.source" content="“QS&BB”" />
+  
+    <!-- Open Graph metadata -->
+
+    
+    <meta property="og:title" content="Relativity"/>
+    <meta property="og:description" content="An Ed edition">
+    <meta property="fb:admins" content="elotroalex"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://qstbb.pa.msu.edu//ed/lectures/SpecialRelativity1_1/"/>
+    <meta property="fb:app_id" content="589495744558280"/>
+    <meta property="og:image" content="http://qstbb.pa.msu.edu//ed/public/open-graph-logo.png"/>
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    
+   
+<!--   <title>
+    
+      Many Body Wavefunctions
+    
+  </title>-->
+  
+  <title>
+    
+      Relativity
+    
+  </title>
+
+  <!-- CSS links -->
+<!--   <link rel="stylesheet" href="/docs/public/css/syntax.css"/>
+  <link rel="stylesheet" href="/docs/public/css/tqm.css"/>>-->
+  
+  <link rel="stylesheet" href="/ed/public/css/syntax.css"/>
+  <link rel="stylesheet" href="/ed/public/css/ed.css"/>
+ 
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/ed/public/apple-touch-icon-precomposed.png"/>
+  <link rel="shortcut icon" href="/ed/public/favicon.ico"/>
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/ed/atom.xml"/>
+  
+  <!-- MathJax -->
+
+ <script type="text/javascript"
+   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+ </script>
+
+ <!---<script type="text/javascript"
+   src="/docs/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+ </script>--->
+
+ <script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+   TeX: { equationNumbers: { autoNumber: "all" },
+          Macros: {
+          cP: '\\mathcal{P}',
+          cN: '\\mathcal{N}',
+          cE: '\\mathcal{E}',
+          cO: '\\mathcal{O}',
+          cH: '\\mathcal{H}',
+          cC: '\\mathcal{C}',
+          br: '\\mathbf{r}',
+          bx: '\\mathbf{x}',
+          bp: '\\mathbf{p}',
+          bq: '\\mathbf{q}',
+          bk: '\\mathbf{k}',
+          bv: '\\mathbf{v}',
+          bA: '\\mathbf{A}',
+          brN: '\\br_1, \\ldots, \\br_N',
+          bxN: 'x_1, \\ldots, x_N',
+          pop: '\\psi^{\\vphantom{\\dagger}}',
+          pdop: '\\psi^\\dagger',
+          Phop: '\\Phi^{\\vphantom{\\dagger}}',
+          Phdop: '\\Phi^\\dagger',
+          phop: '\\phi^{\\vphantom{\\dagger}}',
+          phdop: '\\phi^\\dagger',
+          aop: 'a^{\\vphantom{\\dagger}}',
+          adop: 'a^\\dagger',
+          alop: '\\alpha^{\\vphantom{\\dagger}}',
+          aldop: '\\alpha^\\dagger',
+          bop: 'b^{\\vphantom{\\dagger}}',
+          bdop: 'b^\\dagger',
+          cop: 'c^{\\vphantom{\\dagger}}',
+          cdop: 'c^\\dagger',
+          Nop:  '\\mathsf{N}^{\\vphantom{\\dagger}}',
+          tr: '\\operatorname{tr}\\nolimits',
+          det: '\\operatorname{det}\\nolimits',
+          perm: '\\operatorname{perm}\\nolimits',
+          sgn: '\\operatorname{sgn}',
+          E: '\\operatorname{\\mathbb{E}}',
+          Var: '\\operatorname{\\mathbb{Var}}',
+          Cov: '\\operatorname{\\mathbb{Cov}}',
+          Re: '\\operatorname{Re}}',
+          ket: ['\\lvert{#1}\\rangle',1],
+          bra: ['\\langle{#1}\\rvert',1],
+          inner: ['\\langle{#1}\\rvert #2 \\rangle',2],
+          braket: ['\\langle{#1}\\rvert #2 \\lvert #3 \\rangle',3],
+          abs: ['\\lvert{#1}\\rvert',1]
+    }
+  },
+   extensions: ["tex2jax.js"],
+   jax: ["input/TeX","output/HTML-CSS"],
+   tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+ });
+ </script>
+
+$$
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\nonumber
+$$
+
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 50%;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #a7a7a7;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #dbdbdb;
+    color: black;
+}
+</style>
+  
+</head>
+
+  <body class="theme-base-0b">
+  
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- This if statement decides which sidebar to use -->
+    
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>An excursion into particle physics and cosmology for non-science students</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/ed/">Home</a>
+
+    
+
+    
+    
+      
+        
+          <a class="sidebar-nav-item" href="/ed/lectures/motionAZ4/">Just Motion</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/ed/lectures/Galileo_bit/">A Little Bit of Galileo</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/ed/lectures/speed/">Speed</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item active" href="/ed/lectures/SpecialRelativity1_1/">Relativity</a>
+        
+      
+    
+
+    <!-- The code below is used for manually entered links  -->
+
+    <a class="sidebar-nav-item" href="https://via.hypothes.is/http://qstbb.pa.msu.edu//ed/lectures/SpecialRelativity1_1/">Annotate me</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>Distributed with an MIT license.</p>
+  </div>
+</div>
+
+    
+
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/ed/" title="Home">“QS&BB”</a>
+            <br><small>Quarks, Spacetime, and the Big Bang</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content" id="main">
+        <div class="page">
+  <h1 class="page-title">Relativity</h1>
+  
+
+<h2 id="a-little-bit-of-einstein">A Little Bit of Einstein</h2>
+<p>In one year Albert Einstein had three breakthroughs of pure thought and simple mathematics, any one of which would put him in textbooks forever. Before 1920 he had at least four more theoretical discoveries that were again, all Prize-worthy. He basically invented five different fields of physics and changed the way humans look at themselves and our universe forever. and ever.</p>
+
+<p>Where are we?</p>
+
+<p>This is a card. and another card</p>
+
+<p>Einstein was a complicated man. He was not plagued with the sort of insecurities that blinded Newton, or the self-destructive combativeness of Galileo. He sometimes showed a shocking inability to empathize with individuals, while simultaneously demonstrating great feeling for mankind and professing a highly principled view of world affairs. He had great, life-long friendships and a childlike sense of humor that showed through in photographs and interviews. People around the world loved him and, while he was not prepared for the notoriety that he would achieve—bursting on him overnight on November 7th, 1919—he clearly grew to enjoy the spotlight. The myths surrounding him are, as we’ve seen, an inevitable consequence of being larger than life.</p>
+
+<script type="math/tex; mode=display">\begin{equation} E=mc^2 \end{equation}</script>
+
+<p>He died in 1955 (when I was five years old) in Princeton, New Jersey where he and his $E=mc^2$ second wife escaped from the Nazis two decades previously. I think he looked older than his 76 years, perhaps a reflection of a stressful life following his scientific discoveries. Their Mercer Street home is still a private residence and he requested that it not become a museum (as his apartment in Bern, Switzerland is now). Those wishes were respected, although it is listed on the National Register of Historic Places.</p>
+
+<h2 id="education">Education</h2>
+<p>Einstein was so smart that he was born at a very early age. :) He grew up in Munich in a comfortable household with a younger sister he adored. His father and uncle had a successful business of electrifying German municipalities. But it failed when he was a teenager and the family moved to Italy to start over. But Einstein was famous for his independent streak and even at 15 years of age he remained in Munich by himself. The Catholic school in which his Jewish parents had enrolled him was not a good fit, but then most schools weren’t.</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*} 3x - 4y &= 5 \\ x  +  7 &= -2y\end{align*} %]]></script>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse finibus vel est id interdum. Mauris laoreet eros arcu, quis consectetur ipsum laoreet ut. Duis in dui pellentesque, laoreet mi vel, finibus mi. Praesent ac nulla vel dolor ultrices sollicitudin. Phasellus quis gravida dolor, quis ornare lectus. Nullam sit amet ultricies nulla. Aenean mattis urna ligula, ultricies finibus orci placerat et. Nulla nunc erat, ultricies a venenatis vel, sagittis ac est. Etiam vehicula enim lorem, vitae pellentesque diam tincidunt quis. Cras non ante felis. Suspendisse potenti.</p>
+
+<script type="math/tex; mode=display">\begin{equation} E=mc^2  \end{equation}</script>
+
+<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ut nisl eget erat ornare tincidunt. Sed convallis sollicitudin lectus, vel mattis urna dictum ut. Equation [~\ref{eq:sample}~]  Donec in elit gravida, gravida ipsum ut, imperdiet quam. Donec dictum tempus nisl, accumsan dictum dui commodo vel. Morbi eget sem et enim consectetur cursus eu ut ligula. Pellentesque eget pretium o
+</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <!-- My particular scripts -->
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+ <!-- My particular scripts -->
+
+    <script>
+
+    // Highlight search Query
+    var url = window.location.href;
+      if (url.lastIndexOf("?q=") > 0) {
+        // get the index of the parameter, add three (to account for length)
+        var stringloc = url.lastIndexOf("?q=") + 3;
+        // get the substring (query) and decode
+        var searchquery = decodeURIComponent(url.substr(stringloc));
+        // regex matches at beginning of line, end of line or word boundary, useful for poetry
+        var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
+        // get, add mark and then set content
+        var content = document.getElementById("main").innerHTML;
+        document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
+      }
+
+    // Toggle sidebar
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <!-- Facebook SDK for JavaScript -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '589495744558280',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+  </body>
+</html>
